@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/heart"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/heart"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Klasifikasi"
+        tools:targetApi="31">
+        <activity
+            android:name=".Simulasi"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Model"
+            android:exported="false" />
+        <activity
+            android:name=".Logout"
+            android:exported="false" />
+        <activity
+            android:name=".Fitur"
+            android:exported="false" />
+        <activity
+            android:name=".Dataset"
+            android:exported="false" />
+        <activity
+            android:name=".CaViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

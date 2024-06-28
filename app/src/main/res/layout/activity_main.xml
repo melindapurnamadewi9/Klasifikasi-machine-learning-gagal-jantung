@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Jingga"
+        tools:context=".MainActivity">
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/white"
+            android:text="Predict"
+            android:textColor="@color/Jingga"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editSTSlope"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/btnCheck"
+            app:layout_constraintStart_toStartOf="@id/btnCheck"
+            app:layout_constraintTop_toBottomOf="@id/btnCheck" />
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/pink_border"
+            android:textColorHint="@color/white"
+            android:ems="15"
+            android:hint=" Umur (20 - 90)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editSex"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" Jenis Kelamin (1P-2L)"
+            android:background="@drawable/pink_border"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editAge"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editChestPainType"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:background="@drawable/pink_border"
+            android:hint="  Nyeri Dada (1 Ya - 2 Tidak))"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editSex"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/editRestingBP"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Tekanan darah(80-160))"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editChestPainType"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editCholesterol"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Hormon insulin (1 Normal - 2 Tidak )"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editRestingBP"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/Diabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Kolestrol (100-500)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editCholesterol"
+            tools:ignore="HardcodedText" />
+
+
+
+        <EditText
+            android:id="@+id/editFastingBS"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Umur (20 - 80)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Diabetes"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editRestingECG"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" E.Kardiogram (0-2)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:textColorHint="@color/white"
+            android:background="@drawable/pink_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editFastingBS"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editMaxHR"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" D.Jantung (60-200)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:textColorHint="@color/white"
+            android:background="@drawable/pink_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editRestingECG"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editExerciseAngina"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" Angina (1-70)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:textColorHint="@color/white"
+            android:background="@drawable/pink_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editMaxHR"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editOldpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" Depresi (0-6%)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:textColorHint="@color/white"
+            android:background="@drawable/pink_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editExerciseAngina"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editSTSlope"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" Kemiringan latihan (Normal 1 - Tidak 2)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:textColorHint="@color/white"
+            android:background="@drawable/pink_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editOldpeak"
+            tools:ignore="HardcodedText" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
